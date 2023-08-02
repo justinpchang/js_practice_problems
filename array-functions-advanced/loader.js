@@ -1,7 +1,7 @@
 const problems = [
   {
     id: "map1",
-    text: "Get an array of all names (mse map)",
+    text: "Get an array of all names (use map)",
     solution: [
       "Luke Skywalker",
       "Darth Vader",
@@ -318,7 +318,7 @@ const list = document.getElementById("problems");
 
 problems.forEach((problem) => {
   const textEl = document.createElement("p");
-  textEl.innerText = problem.text;
+  textEl.innerText = `[${problem.id}] ${problem.text}`;
   const myAnswerPreEl = document.createElement("pre");
   if (window[problem.id]) {
     myAnswerPreEl.innerText = JSON.stringify(window[problem.id]());
